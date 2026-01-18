@@ -569,6 +569,9 @@ Comandos disponíveis:
 Este arquivo trabalha em conjunto com:
 
 - **`.agent/project-rules.md`** - Regras globais e mentalidade
+- **`.agent/project-config.md`** - Configuração técnica
+- **`.agent/design-tokens.md`** - Lista oficial de tokens primitivos
+- **`.agent/prompts.md`** - Sequência de prompts de desenvolvimento
 - **`.agent/workflows/`** - Workflows específicos
 - **Design System** - Tokens e variáveis (quando disponível)
 

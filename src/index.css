@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+/* Custom theme configuration for Tailwind v4 */
+@theme {
+  /* Neutral scale */
+  --color-neutral-0: #FFFFFF;
+  --color-neutral-50: #F9FAFB;
+  --color-neutral-100: #F3F4F6;
+  --color-neutral-200: #E5E7EB;
+  --color-neutral-300: #D1D5DB;
+  --color-neutral-400: #9CA3AF;
+  --color-neutral-500: #6B7280;
+  --color-neutral-600: #4B5563;
+  --color-neutral-700: #374151;
+  --color-neutral-800: #1F2937;
+  --color-neutral-900: #111827;
+  --color-neutral-1000: #080B12;
+  --color-neutral-1100: #000000;
+
+  /* Brand (Lime Green) */
+  --color-brand-100: #FBFFE6;
+  --color-brand-200: #F3FFB1;
+  --color-brand-300: #EDFF8B;
+  --color-brand-400: #E4FE56;
+  --color-brand-500: #DFFE35;
+  --color-brand-600: #D7FE03;
+  --color-brand-700: #C4E703;
+  --color-brand-800: #99B402;
+  --color-brand-900: #768C02;
+  --color-brand-1000: #5A6B01;
+
+  /* Green (Positive) */
+  --color-positive-light: #E8F9F2;
+  --color-positive: #15BE78;
+  --color-positive-dark: #119860;
+
+  /* Red (Negative) */
+  --color-negative-light: #FDE9EB;
+  --color-negative: #E61E32;
+  --color-negative-dark: #B81828;
+
+  /* Blue (Info/Banks) */
+  --color-info-light: #EAF3FD;
+  --color-info: #2A89EF;
+
+  /* Custom spacing */
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-20: 20px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-40: 40px;
+  --spacing-48: 48px;
+  --spacing-64: 64px;
+  --spacing-80: 80px;
+  --spacing-96: 96px;
+  --spacing-128: 128px;
+
+  /* Border radius */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+  --radius-3xl: 24px;
+  --radius-4xl: 32px;
+  --radius-5xl: 40px;
+
+  /* Font sizes */
+  --font-size-display-lg: 64px;
+  --font-size-display-md: 48px;
+  --font-size-display-sm: 36px;
+  --font-size-display-xs: 30px;
+  --font-size-h-2xl: 40px;
+  --font-size-h-xl: 32px;
+  --font-size-h-lg: 24px;
+  --font-size-h-md: 20px;
+  --font-size-h-sm: 18px;
+  --font-size-h-xs: 16px;
+  --font-size-label-lg: 16px;
+  --font-size-label-md: 14px;
+  --font-size-label-sm: 12px;
+  --font-size-label-xs: 10px;
+  --font-size-p-lg: 18px;
+  --font-size-p-md: 16px;
+  --font-size-p-sm: 14px;
+  --font-size-p-xs: 12px;
+}
+
+@layer base {
+  body {
+    @apply bg-neutral-0 text-neutral-1000 antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer components {
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-neutral-200 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-neutral-300;
+  }
+}

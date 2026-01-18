@@ -1,0 +1,115 @@
+import type { Config } from 'tailwindcss'
+
+const config: Config = {
+    content: [
+        "./index.html",
+        "./src/**/*.{js,ts,jsx,tsx}",
+    ],
+    theme: {
+        extend: {
+            colors: {
+                neutral: {
+                    0: 'var(--neutral-0)',
+                    50: 'var(--neutral-50)',
+                    100: 'var(--neutral-100)',
+                    200: 'var(--neutral-200)',
+                    300: 'var(--neutral-300)',
+                    400: 'var(--neutral-400)',
+                    500: 'var(--neutral-500)',
+                    600: 'var(--neutral-600)',
+                    700: 'var(--neutral-700)',
+                    800: 'var(--neutral-800)',
+                    900: 'var(--neutral-900)',
+                    1000: 'var(--neutral-1000)',
+                    1100: 'var(--neutral-1100)',
+                },
+                brand: {
+                    100: 'var(--brand-100)',
+                    200: 'var(--brand-200)',
+                    300: 'var(--brand-300)',
+                    400: 'var(--brand-400)',
+                    500: 'var(--brand-500)',
+                    600: 'var(--brand-600)',
+                    700: 'var(--brand-700)',
+                    800: 'var(--brand-800)',
+                    900: 'var(--brand-900)',
+                    1000: 'var(--brand-1000)',
+                },
+                positive: {
+                    light: 'var(--green-100)',
+                    DEFAULT: 'var(--green-600)',
+                    dark: 'var(--green-700)',
+                },
+                negative: {
+                    light: 'var(--red-100)',
+                    DEFAULT: 'var(--red-600)',
+                    dark: 'var(--red-700)',
+                },
+                info: {
+                    light: 'var(--blue-100)',
+                    DEFAULT: 'var(--blue-600)',
+                }
+            },
+            spacing: {
+                '0': 'var(--space-0)',
+                '2': 'var(--space-2)',
+                '4': 'var(--space-4)',
+                '8': 'var(--space-8)',
+                '12': 'var(--space-12)',
+                '16': 'var(--space-16)',
+                '20': 'var(--space-20)',
+                '24': 'var(--space-24)',
+                '32': 'var(--space-32)',
+                '40': 'var(--space-40)',
+                '48': 'var(--space-48)',
+                '64': 'var(--space-64)',
+                '80': 'var(--space-80)',
+                '96': 'var(--space-96)',
+                '128': 'var(--space-128)',
+            },
+            borderRadius: {
+                'none': 'var(--shape-0)',
+                'sm': 'var(--shape-2)',
+                'md': 'var(--shape-4)',
+                'lg': 'var(--shape-8)',
+                'xl': 'var(--shape-12)',
+                '2xl': 'var(--shape-16)',
+                '3xl': 'var(--shape-24)',
+                '4xl': 'var(--shape-32)',
+                '5xl': 'var(--shape-40)',
+                'full': 'var(--shape-100)',
+            },
+            fontSize: {
+                'display-lg': ['var(--font-size-display-large)', { lineHeight: '1.2' }],
+                'display-md': ['var(--font-size-display-medium)', { lineHeight: '1.2' }],
+                'display-sm': ['var(--font-size-display-small)', { lineHeight: '1.2' }],
+                'display-xs': ['var(--font-size-display-x-small)', { lineHeight: '1.2' }],
+                'h-2xl': 'var(--font-size-heading-xx-large)',
+                'h-xl': 'var(--font-size-heading-x-large)',
+                'h-lg': 'var(--font-size-heading-large)',
+                'h-md': 'var(--font-size-heading-medium)',
+                'h-sm': 'var(--font-size-heading-small)',
+                'h-xs': 'var(--font-size-heading-x-small)',
+                'label-lg': 'var(--font-size-label-large)',
+                'label-md': 'var(--font-size-label-medium)',
+                'label-sm': 'var(--font-size-label-small)',
+                'label-xs': 'var(--font-size-label-x-small)',
+                'p-lg': 'var(--font-size-paragraph-large)',
+                'p-md': 'var(--font-size-paragraph-medium)',
+                'p-sm': 'var(--font-size-paragraph-small)',
+                'p-xs': 'var(--font-size-paragraph-x-small)',
+            },
+            backgroundImage: {
+                'lime-gradient': 'linear-gradient(135deg, var(--brand-500) 0%, var(--brand-600) 100%)',
+                'dark-gradient': 'linear-gradient(180deg, var(--neutral-900) 0%, var(--neutral-1100) 100%)',
+            },
+            boxShadow: {
+                'premium': '0 10px 30px -10px rgba(0, 0, 0, 0.1)',
+                'lime-glow': '0 0 20px rgba(215, 254, 3, 0.3)',
+            }
+        },
+    },
+    plugins: [],
+}
+
+export default config

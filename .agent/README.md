@@ -10,8 +10,10 @@
 .agent/
 ├── README.md              (Este arquivo - Índice principal)
 ├── project-rules.md       (Regras globais e mentalidade)
-├── project-config.md      (Configuração técnica detalhada)
-├── project-context.md     (Contexto e especificações do mycash+)
+├── project-config.md      (Configuracao tecnica detalhada)
+├── project-context.md     (Contexto e especificacoes do mycash+)
+├── design-tokens.md       (Lista oficial de tokens primitivos)
+├── prompts.md             (Sequência de prompts para desenvolvimento)
 └── workflows/
     ├── README.md          (Índice de comandos)
     ├── analisar.md
@@ -125,7 +127,37 @@ Antes de escrever qualquer código:
 
 ---
 
-### 4. [Workflows](./workflows/README.md)
+### 4. [Design Tokens](./design-tokens.md)
+**Lista oficial de variáveis e tokens primitivos do projeto**
+
+**Quando consultar:**
+- Ao escolher cores, espaçamentos e tamanhos
+- Durante a conversão de valores do Figma para código
+- Para garantir consistência visual
+
+**Conteúdo:**
+- Escalas de cores (Neutral, Brand, etc)
+- Escalas de espaçamento (Space) e tamanhos (Size)
+- Arredondamentos (Shape) e opacidade
+- Tipografia (Font size, weight, line-height)
+- Definições de sombra
+
+---
+
+### 5. [Prompts de Desenvolvimento](./prompts.md)
+**Sequência planejada de prompts para construção do sistema**
+
+**Quando consultar:**
+- Para seguir a ordem lógica de implementação do projeto
+- Como base para os próximos passos de desenvolvimento
+
+**Conteúdo:**
+- 24 prompts detalhados cobrindo desde a fundação até a finalização
+- Fases de layout, estado, dashboard, tabelas, modais e polimento
+
+---
+
+### 6. [Workflows](./workflows/README.md)
 **Comandos de alto impacto para desenvolvimento**
 
 **Quando usar:**
