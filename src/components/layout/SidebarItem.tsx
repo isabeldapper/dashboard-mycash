@@ -15,23 +15,26 @@ const SidebarItem: React.FC<SidebarItemProps> = ({ icon: Icon, label, to, isColl
         <NavLink
             to={to}
             className={({ isActive }) =>
-                `flex items-center gap-12 p-12 rounded-xl transition-all duration-300 group relative ${isActive
-                    ? 'bg-neutral-1000 text-brand-600'
-                    : 'text-neutral-500 hover:bg-neutral-100 hover:text-neutral-1000'
+                `flex items-center gap-3 px-4 h-[48px] rounded-xl transition-all duration-200 group relative font-semibold ${isActive
+                    ? 'bg-[#D7FF00] text-[#080B12] shadow-sm'
+                    : 'text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900'
                 }`
             }
         >
             <div className="flex-shrink-0">
-                <Icon size={24} />
+                <Icon
+                    size={24}
+                    className="transition-colors duration-300"
+                />
             </div>
 
-            <AnimatePresence mode="wait">
+            <AnimatePresence mode="wait" initial={false}>
                 {!isCollapsed && (
                     <motion.span
-                        initial={{ opacity: 0, x: -10 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: -10 }}
-                        transition={{ duration: 0.2 }}
+                        initial={{ opacity: 0, width: 0 }}
+                        animate={{ opacity: 1, width: 'auto' }}
+                        exit={{ opacity: 0, width: 0 }}
+                        transition={{ duration: 0.2, ease: "easeInOut" }}
                         className="font-medium whitespace-nowrap overflow-hidden"
                     >
                         {label}
@@ -40,9 +43,11 @@ const SidebarItem: React.FC<SidebarItemProps> = ({ icon: Icon, label, to, isColl
             </AnimatePresence>
 
             {isCollapsed && (
-                <div className="absolute left-[calc(100%+12px)] opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-200">
-                    <div className="bg-neutral-1000 text-neutral-0 text-xs px-8 py-4 rounded-md whitespace-nowrap shadow-premium">
+                <div className="absolute left-[calc(100%+16px)] opacity-0 group-hover:opacity-100 pointer-events-none transition-all duration-200 translate-x-[-10px] group-hover:translate-x-0 z-50">
+                    <div className="bg-neutral-1100 text-neutral-0 text-xs px-12 py-6 rounded-lg whitespace-nowrap shadow-premium border border-neutral-800">
                         {label}
+                        {/* Tooltip Arrow alternative */}
+                        <div className="absolute left-[-4px] top-1/2 -translate-y-1/2 w-8 h-8 bg-neutral-1100 rotate-45 border-l border-b border-neutral-800" />
                     </div>
                 </div>
             )}
